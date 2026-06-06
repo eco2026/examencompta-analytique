@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Examen + Correction - Comptabilité Analytique (FERMO)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Merriweather', serif;
+            background: #eef2f5;
+            color: #1a2c3e;
+            line-height: 1.55;
+            padding: 30px 20px;
+        }
+
+        .main-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .enonce-section {
+            background: #fef9e6;
+            border-bottom: 3px solid #d0c29b;
+            padding: 25px 35px;
+        }
+
+        .enonce-section h2 {
+            color: #a5581c;
+            border-left: 5px solid #e67e22;
+            padding-left: 15px;
+            margin-bottom: 18px;
+            font-size: 1.7rem;
+        }
+
+        .enonce-section h3 {
+            color: #b55b1a;
+            margin: 20px 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        .enonce-table {
+            background: white;
+            border-radius: 18px;
+            overflow-x: auto;
+            margin: 20px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        .enonce-table table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .enonce-table th, .enonce-table td {
+            border: 1px solid #c9bc9a;
+            padding: 10px 8px;
+            text-align: center;
+        }
+
+        .enonce-table th {
+            background-color: #f0e1c7;
+            color: #5a3e1b;
+            font-weight: 700;
+        }
+        
+        .empty-cell {
+            background-color: #fff2e0;
+            color: #b5651e;
+            font-style: italic;
+        }
+
+        .correction-section {
+            padding: 30px 35px 45px 35px;
+            background: white;
+        }
+
+        .correction-section h2 {
+            font-size: 1.65rem;
+            font-weight: 600;
+            color: #154e6b;
+            margin: 40px 0 16px 0;
+            padding-left: 14px;
+            border-left: 6px solid #2c8ebb;
+            background: linear-gradient(90deg, #f0f6fa, transparent);
+            padding: 10px 0 10px 18px;
+            border-radius: 12px;
+        }
+
+        .calc-note {
+            background: #eef5fc;
+            padding: 18px 22px;
+            border-radius: 20px;
+            margin: 20px 0;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 0.95rem;
+            border-left: 5px solid #2c8ebb;
+            line-height: 1.6;
+        }
+
+        .important-note {
+            background: #fff2e0;
+            border-left: 5px solid #e67e22;
+            padding: 14px 20px;
+            margin: 20px 0;
+            border-radius: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.9rem;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        th {
+            background-color: #1f496e;
+            color: white;
+            font-weight: 600;
+            padding: 12px 8px;
+            border: 1px solid #2b5a7a;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #cfdfe9;
+            padding: 10px 8px;
+            text-align: right;
+        }
+
+        td:first-child, th:first-child {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .highlight-row {
+            background-color: #eef2f3;
+            font-weight: 700;
+        }
+        .highlight-row td {
+            background-color: #f8fbfd;
+        }
+
+        footer {
+            margin-top: 45px;
+            border-top: 1px solid #cbdbe2;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #5f7f9c;
+        }
+
+        @media (max-width: 700px) {
+            .enonce-section, .correction-section {
+                padding: 20px 18px;
+            }
+            th, td {
+                font-size: 0.75rem;
+                padding: 6px 4px;
+            }
+        }
+        .badge-exam {
+            background: #e67e22;
+            color: white;
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .question-list {
+            background: #faf5e8;
+            padding: 16px 20px;
+            border-radius: 24px;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+<div class="main-container">
+    <!-- ================= ENONCE ORIGINAL ================= -->
+    <div class="enonce-section">
+        <div class="badge-exam">Université Hassan 1er – FEG – Pr Youssef RACHID | Session rattrapage 2023-2024 (S3)</div>
+        <h2>📘 Examen de comptabilité analytique <br> <span style="font-size:1.2rem;">Société FERMO – produit « NUTRIFO »</span></h2>
+        <p><strong>Durée : 1 heure</strong></p>
+        <p>FERMO est une société spécialisée dans la fabrication des produits agroalimentaires. Elle commercialise depuis peu « NUTRIFO », constitué de 3 matières premières M1, M2 et M3. Après traitement, le produit est conditionné dans des boîtes de 500 grammes. L’ensemble des travaux se fait dans un même atelier. Le produit est stocké avant d’être vendu.</p>
+
+        <h3>I. Informations relatives à la comptabilité analytique de décembre 2023</h3>
+        <ul style="margin-left: 25px; margin-bottom: 15px;">
+            <li><strong>Achats de matières premières :</strong> 300 000 kg de M1 pour 1 179 900 dh ; 200 000 kg de M2 à 0,933 dh/kg ; 125 000 kg de M3 à 2,433 dh/kg.</li>
+            <li><strong>Charges indirectes (après retrait des charges directes) :</strong> Autres charges externes 95 000 dh, Impôts & taxes 50 500 dh, Charges de personnel 158 610 dh, Charges financières 118 000 dh (exclues), Charges non courantes 52 000 dh (exclues), Dotations 93 800 dh, Charges supplétives 11 560 dh.</li>
+            <li>Stock initial M1 : 10 000 kg pour 40 000 dh. Stocks initiaux M2 et M3 nuls.</li>
+            <li><strong>Consommation de la période :</strong> M1 : 294 000 kg ; M2 : 160 000 kg ; M3 : 96 000 kg.</li>
+            <li>Le traitement fait perdre 10% du poids global des matières premières utilisées.</li>
+            <li><strong>Ventes du mois :</strong> 1 100 000 boîtes au prix de 2,50 dh HT la boîte.</li>
+        </ul>
+
+        <h3>II. Tableau de répartition des charges indirectes</h3>
+        <div class="enonce-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Éléments</th>
+                        <th>Total des charges indirectes</th>
+                        <th>Approvisionnement</th>
+                        <th>Fabrication</th>
+                        <th>Conditionnement</th>
+                        <th>Distribution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Totaux de la répartition secondaire</td>
+                        <td class="empty-cell">?</td>
+                        <td>42 125</td>
+                        <td>202 500</td>
+                        <td>85 800</td>
+                        <td class="empty-cell">?</td>
+                     </tr>
+                    <tr>
+                        <td>Nature d'U.O</td>
+                        <td>—</td>
+                        <td>1 000 Kg de matières premières achetées</td>
+                        <td>1 000 Kg de produits fabriqués</td>
+                        <td>1 000 boîtes conditionnées</td>
+                        <td>1 000 dh de CA (HT)</td>
+                     </tr>
+                    <tr>
+                        <td>Nombre d'U.O</td>
+                        <td>—</td>
+                        <td class="empty-cell">?</td>
+                        <td class="empty-cell">?</td>
+                        <td class="empty-cell">?</td>
+                        <td class="empty-cell">?</td>
+                     </tr>
+                    <tr>
+                        <td>Coût d'U.O</td>
+                        <td>—</td>
+                        <td class="empty-cell">?</td>
+                        <td class="empty-cell">?</td>
+                        <td class="empty-cell">?</td>
+                        <td class="empty-cell">?</td>
+                     </tr>
+                </tbody>
+             </table>
+        </div>
+
+        <div class="question-list">
+            📌 <strong>Travail à faire :</strong><br>
+            1. Calculer le montant total des charges indirectes de la comptabilité analytique ? (3 points)<br>
+            2. Compléter le tableau de répartition des charges indirectes. (4,5 points)<br>
+            3. Calculer le coût d'achat des trois matières premières. (4,5 points)<br>
+            4. Établir l'inventaire permanent des stocks de la matière première M1 (CMUP). (2 points)<br>
+            5. Calculer le coût de production du kilogramme de produit « NUTRIFO » à la sortie de l'atelier Fabrication. (4 points)<br>
+            6. Calculer le coût de production des boîtes de « NUTRIFO ». (2 points)
+        </div>
+        <p style="margin-top: 10px; font-style:italic;">🔔 BON COURAGE – Page 2/2</p>
+    </div>
+
+    <!-- ================= CORRECTION ================= -->
+    <div class="correction-section">
+        <h2>✅ 1. Montant total des charges indirectes (CAE)</h2>
+        <div class="calc-note">
+            🔍 <strong>Charges à incorporer :</strong><br>
+            • Autres charges externes : 95 000 DH<br>
+            • Impôts et taxes : 50 500 DH<br>
+            • Charges de personnel : 158 610 DH<br>
+            • Dotations : 93 800 DH<br>
+            • Charges supplétives : 11 560 DH<br>
+            ⚡ <strong>Exclues :</strong> charges financières (118 000) + non courantes (52 000)<br>
+            ➕ <strong>Total = 95 000 + 50 500 + 158 610 + 93 800 + 11 560 = 409 470,00 DH</strong>
+        </div>
+
+        <h2>✅ 2. Tableau de répartition des charges indirectes (complété)</h2>
+        <div class="calc-note">
+            📌 <strong>Calculs détaillés :</strong><br>
+            • <strong>Approvisionnement</strong> : 42 125 DH – UO = 1 000 kg acheté. Achats totaux = 300 000 + 200 000 + 125 000 = 625 000 kg → <strong>625 UO</strong> → Coût UO = 42 125 / 625 = <strong>67,40 DH</strong><br>
+            • <strong>Fabrication</strong> : 202 500 DH – UO = 1 000 kg fabriqué. MP consommées = 294 000 + 160 000 + 96 000 = 550 000 kg. Perte 10% → poids net = 550 000 × 0,90 = 495 000 kg → <strong>495 UO</strong> → Coût UO = 202 500 / 495 = <strong>409,09 DH</strong><br>
+            • <strong>Conditionnement</strong> : 85 800 DH – UO = 1 000 boîtes. Production boîtes = 495 000 kg / 0,5 kg = 990 000 boîtes → <strong>990 UO</strong> → Coût UO = 85 800 / 990 = <strong>86,6667 ≈ 86,67 DH</strong><br>
+            • <strong>Distribution</strong> : Total des charges = 409 470 = 42 125 + 202 500 + 85 800 + Distribution → Distribution = 409 470 - 330 425 = <strong>79 045 DH</strong><br>
+            &nbsp;&nbsp;Chiffre d'affaires = 1 100 000 × 2,50 = 2 750 000 DH → Nombre UO = 2 750 000 / 1 000 = <strong>2 750 UO</strong><br>
+            &nbsp;&nbsp;Coût UO = 79 045 / 2 750 = <strong>28,7436 ≈ 28,74 DH</strong>
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>Éléments</th><th>Total charges indirectes</th><th>Approvisionnement</th><th>Fabrication</th><th>Conditionnement</th><th>Distribution</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Totaux répartition secondaire (DH)</td>
+                    <td class="text-center">409 470,00</td>
+                    <td class="text-center">42 125,00</td>
+                    <td class="text-center">202 500,00</td>
+                    <td class="text-center">85 800,00</td>
+                    <td class="text-center">79 045,00</td>
+                 </tr>
+                <tr>
+                    <td>Nature UO</td>
+                    <td class="text-center">—</td>
+                    <td class="text-center">1 000 kg acheté</td>
+                    <td class="text-center">1 000 kg fabriqué</td>
+                    <td class="text-center">1 000 boîtes</td>
+                    <td class="text-center">1 000 DH CA</td>
+                 </tr>
+                <tr>
+                    <td>Nombre d'UO</td>
+                    <td class="text-center">—</td>
+                    <td class="text-center">625,00</td>
+                    <td class="text-center">495,00</td>
+                    <td class="text-center">990,00</td>
+                    <td class="text-center">2 750,00</td>
+                 </tr>
+                <tr class="highlight-row">
+                    <td>Coût de l'UO (DH)</td>
+                    <td class="text-center">—</td>
+                    <td class="text-center"><strong>67,40</strong></td>
+                    <td class="text-center"><strong>409,09</strong></td>
+                    <td class="text-center"><strong>86,67</strong></td>
+                    <td class="text-center"><strong>28,74</strong></td>
+                 </tr>
+            </tbody>
+        </table>
+
+        <h2>✅ 3. Coût d'achat des trois matières premières (M1, M2, M3)</h2>
+        <div class="calc-note">
+            📌 <strong>Méthode :</strong> Coût d'achat = Prix d'achat total + (Quantité achetée / 1000) × 67,40<br>
+            • Charges d'approvisionnement unitaires = 67,40 / 1000 = <strong>0,0674 DH/kg</strong>
+        </div>
+
+        <!-- TABLEAU COUT D'ACHAT SELON TA METHODE EXACTE -->
+        <table>
+            <thead>
+                <tr><th>Éléments</th><th>Quantité (kg)</th><th>Prix unitaire (DH)</th><th>Montant total (DH)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td colspan="4"><strong>⚙️ Matière M1</strong></td></tr>
+                <tr><td>Prix d'achat net</td><td>300 000,00</td><td>3,9330</td><td>1 179 900,00</td></tr>
+                <tr><td>Charges d'approvisionnement</td><td>300 000,00</td><td>0,0674</td><td>20 220,00</td></tr>
+                <tr class="highlight-row"><td><strong>Coût d'achat total M1</strong></td><td><strong>300 000,00</strong></td><td><strong>4,0004</strong></td><td><strong>1 200 120,00</strong></td></tr>
+                <tr><td colspan="4"><strong>⚙️ Matière M2</strong></td></tr>
+                <tr><td>Prix d'achat net</td><td>200 000,00</td><td>0,9330</td><td>186 600,00</td></tr>
+                <tr><td>Charges d'approvisionnement</td><td>200 000,00</td><td>0,0674</td><td>13 480,00</td></tr>
+                <tr class="highlight-row"><td><strong>Coût d'achat total M2</strong></td><td><strong>200 000,00</strong></td><td><strong>1,0004</strong></td><td><strong>200 080,00</strong></td></tr>
+                <tr><td colspan="4"><strong>⚙️ Matière M3</strong></td></tr>
+                <tr><td>Prix d'achat net</td><td>125 000,00</td><td>2,4330</td><td>304 125,00</td></tr>
+                <tr><td>Charges d'approvisionnement</td><td>125 000,00</td><td>0,0674</td><td>8 425,00</td></tr>
+                <tr class="highlight-row"><td><strong>Coût d'achat total M3</strong></td><td><strong>125 000,00</strong></td><td><strong>2,5004</strong></td><td><strong>312 550,00</strong></td></tr>
+            </tbody>
+        </table>
+
+        <h2>✅ 4. Inventaire permanent – Matière M1 (CMUP)</h2>
+        <div class="calc-note">
+            Stock initial : 10 000 kg à 4,0000 DH (40 000 DH)<br>
+            Entrée : 300 000 kg à 4,0004 DH (1 200 120 DH)<br>
+            <strong>CMUP = (40 000 + 1 200 120) / 310 000 = 4,000387 DH/kg</strong><br>
+            Sortie (294 000 kg) = 1 176 113,78 DH<br>
+            Stock final (16 000 kg) = 64 006,19 DH
+        </div>
+        <table>
+            <thead>
+                <tr><th>Libellé</th><th>Q (kg)</th><th>PU (DH)</th><th>Montant (DH)</th><th>Libellé</th><th>Q (kg)</th><th>PU (DH)</th><th>Montant (DH)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Stock initial</td><td>10 000,00</td><td>4,0000</td><td>40 000,00</td><td>Sorties</td><td>294 000,00</td><td>4,000387</td><td>1 176 113,78</td></tr>
+                <tr><td>Entrée</td><td>300 000,00</td><td>4,0004</td><td>1 200 120,00</td><td>Stock final</td><td>16 000,00</td><td>4,000387</td><td>64 006,19</td></tr>
+                <tr class="highlight-row"><td>TOTAL</td><td>310 000,00</td><td>4,000387</td><td>1 240 120,00</td><td>TOTAL</td><td>310 000,00</td><td>4,000387</td><td>1 240 120,00</td></tr>
+            </tbody>
+        </table>
+
+        <h2>✅ 5. Coût de production du kilogramme (sortie Fabrication)</h2>
+        <div class="calc-note">
+            Poids net produit = 550 000 × 0,90 = 495 000 kg<br>
+            • M1 : 294 000 × 4,000387 = 1 176 113,78<br>
+            • M2 : 160 000 × 1,0004 = 160 064,00<br>
+            • M3 : 96 000 × 2,5004 = 240 038,40<br>
+            • Atelier Fabrication : 202 500,00<br>
+            <strong>Coût total vrac = 1 778 716,18 DH → 3,5934 DH/kg</strong>
+        </div>
+
+        <h2>✅ 6. Coût de production des boîtes</h2>
+        <div class="calc-note">
+            Boîtes produites = 495 000 / 0,5 = 990 000 boîtes<br>
+            Coût vrac transféré = 1 778 716,18 DH<br>
+            Conditionnement = 85 800 DH<br>
+            <strong>Coût total boîtes = 1 864 516,18 DH → 1,8833 DH/boîte</strong>
+        </div>
+
+        <div style="background:#E9F3F5; border-radius: 24px; padding: 18px 24px; margin-top: 30px;">
+            <p style="font-weight:800;">📌 Récapitulatif final :</p>
+            <ul>
+                <li>Total charges indirectes = <strong>409 470 DH</strong></li>
+                <li>Distribution = <strong>79 045 DH</strong></li>
+                <li>Coût d'achat M1 = 1 200 120 DH (4,0004 DH/kg)</li>
+                <li>Coût d'achat M2 = 200 080 DH (1,0004 DH/kg)</li>
+                <li>Coût d'achat M3 = 312 550 DH (2,5004 DH/kg)</li>
+                <li>Coût de production vrac = <strong>1 778 716,18 DH</strong> (3,5934 DH/kg)</li>
+                <li>Coût de production boîtes = <strong>1 864 516,18 DH</strong> (1,8833 DH/boîte)</li>
+            </ul>
+        </div>
+        <footer>
+            Université Hassan 1er – FEG – Pr Youssef RACHID | Session rattrapage 2023-2024<br>
+            Correction conforme – Tableau coût d'achat selon la méthode demandée.
+        </footer>
+    </div>
+</div>
+</body>
+</html>
