@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="refresh" content="5">
     <title>Examen + Correction - Comptabilité Analytique (FERMO)</title>
     <style>
         * {
@@ -10,15 +11,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', 'Roboto', 'Merriweather', serif;
             background: #eef2f5;
             color: #1a2c3e;
-            line-height: 1.55;
-            padding: 30px 20px;
+            line-height: 1.55;            padding: 30px 20px;
         }
-
         .main-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -27,13 +25,11 @@
             box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
             overflow: hidden;
         }
-
         .enonce-section {
             background: #fef9e6;
             border-bottom: 3px solid #d0c29b;
             padding: 25px 35px;
         }
-
         .enonce-section h2 {
             color: #a5581c;
             border-left: 5px solid #e67e22;
@@ -41,13 +37,11 @@
             margin-bottom: 18px;
             font-size: 1.7rem;
         }
-
         .enonce-section h3 {
             color: #b55b1a;
             margin: 20px 0 10px 0;
             font-size: 1.3rem;
         }
-
         .enonce-table {
             background: white;
             border-radius: 18px;
@@ -55,36 +49,30 @@
             margin: 20px 0;
             box-shadow: 0 1px 4px rgba(0,0,0,0.05);
         }
-
         .enonce-table table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.85rem;
         }
-
         .enonce-table th, .enonce-table td {
             border: 1px solid #c9bc9a;
             padding: 10px 8px;
             text-align: center;
         }
-
         .enonce-table th {
             background-color: #f0e1c7;
             color: #5a3e1b;
             font-weight: 700;
         }
-        
         .empty-cell {
             background-color: #fff2e0;
             color: #b5651e;
             font-style: italic;
         }
-
         .correction-section {
             padding: 30px 35px 45px 35px;
             background: white;
         }
-
         .correction-section h2 {
             font-size: 1.65rem;
             font-weight: 600;
@@ -96,7 +84,6 @@
             padding: 10px 0 10px 18px;
             border-radius: 12px;
         }
-
         .calc-note {
             background: #eef5fc;
             padding: 18px 22px;
@@ -107,15 +94,24 @@
             border-left: 5px solid #2c8ebb;
             line-height: 1.6;
         }
-
-        .important-note {
-            background: #fff2e0;
-            border-left: 5px solid #e67e22;
-            padding: 14px 20px;
-            margin: 20px 0;
+        .explanation-box {
+            background: #f4f9f4;
+            border-left: 5px solid #27ae60;
+            padding: 20px;
+            margin: 25px 0;
             border-radius: 16px;
         }
-
+        .explanation-box h3 {
+            color: #1e7e34;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        .explanation-box ul {
+            margin-left: 20px;
+        }
+        .explanation-box li {
+            margin-bottom: 8px;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -125,7 +121,6 @@
             overflow: hidden;
             box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
-
         th {
             background-color: #1f496e;
             color: white;
@@ -134,21 +129,17 @@
             border: 1px solid #2b5a7a;
             text-align: center;
         }
-
         td {
             border: 1px solid #cfdfe9;
             padding: 10px 8px;
             text-align: right;
         }
-
         td:first-child, th:first-child {
             text-align: left;
         }
-
         .text-center {
             text-align: center !important;
         }
-
         .highlight-row {
             background-color: #eef2f3;
             font-weight: 700;
@@ -156,7 +147,6 @@
         .highlight-row td {
             background-color: #f8fbfd;
         }
-
         footer {
             margin-top: 45px;
             border-top: 1px solid #cbdbe2;
@@ -165,7 +155,6 @@
             font-size: 0.75rem;
             color: #5f7f9c;
         }
-
         @media (max-width: 700px) {
             .enonce-section, .correction-section {
                 padding: 20px 18px;
@@ -196,13 +185,12 @@
 </head>
 <body>
 <div class="main-container">
-    <!-- ================= ENONCE ORIGINAL ================= -->
     <div class="enonce-section">
         <div class="badge-exam">Université Hassan 1er – FEG – Pr Youssef RACHID | Session rattrapage 2023-2024 (S3)</div>
         <h2>📘 Examen de comptabilité analytique <br> <span style="font-size:1.2rem;">Société FERMO – produit « NUTRIFO »</span></h2>
         <p><strong>Durée : 1 heure</strong></p>
         <p>FERMO est une société spécialisée dans la fabrication des produits agroalimentaires. Elle commercialise depuis peu « NUTRIFO », constitué de 3 matières premières M1, M2 et M3. Après traitement, le produit est conditionné dans des boîtes de 500 grammes. L’ensemble des travaux se fait dans un même atelier. Le produit est stocké avant d’être vendu.</p>
-
+        
         <h3>I. Informations relatives à la comptabilité analytique de décembre 2023</h3>
         <ul style="margin-left: 25px; margin-bottom: 15px;">
             <li><strong>Achats de matières premières :</strong> 300 000 kg de M1 pour 1 179 900 dh ; 200 000 kg de M2 à 0,933 dh/kg ; 125 000 kg de M3 à 2,433 dh/kg.</li>
@@ -275,7 +263,6 @@
         <p style="margin-top: 10px; font-style:italic;">🔔 BON COURAGE – Page 2/2</p>
     </div>
 
-    <!-- ================= CORRECTION ================= -->
     <div class="correction-section">
         <h2>✅ 1. Montant total des charges indirectes (CAE)</h2>
         <div class="calc-note">
@@ -292,7 +279,7 @@
         <h2>✅ 2. Tableau de répartition des charges indirectes (complété)</h2>
         <div class="calc-note">
             📌 <strong>Calculs détaillés :</strong><br>
-            • <strong>Approvisionnement</strong> : 42 125 DH – UO = 1 000 kg acheté. Achats totaux = 300 000 + 200 000 + 125 000 = 625 000 kg → <strong>625 UO</strong> → Coût UO = 42 125 / 625 = <strong>67,40 DH</strong><br>
+            • <strong>Approvisionnement</strong> : 42 125 DH net – UO = 1 000 kg acheté. Achats totaux = 300 000 + 200 000 + 125 000 = 625 000 kg → <strong>625 UO</strong> → Coût UO = 42 125 / 625 = <strong>67,40 DH</strong><br>
             • <strong>Fabrication</strong> : 202 500 DH – UO = 1 000 kg fabriqué. MP consommées = 294 000 + 160 000 + 96 000 = 550 000 kg. Perte 10% → poids net = 550 000 × 0,90 = 495 000 kg → <strong>495 UO</strong> → Coût UO = 202 500 / 495 = <strong>409,09 DH</strong><br>
             • <strong>Conditionnement</strong> : 85 800 DH – UO = 1 000 boîtes. Production boîtes = 495 000 kg / 0,5 kg = 990 000 boîtes → <strong>990 UO</strong> → Coût UO = 85 800 / 990 = <strong>86,6667 ≈ 86,67 DH</strong><br>
             • <strong>Distribution</strong> : Total des charges = 409 470 = 42 125 + 202 500 + 85 800 + Distribution → Distribution = 409 470 - 330 425 = <strong>79 045 DH</strong><br>
@@ -346,7 +333,6 @@
             • Charges d'approvisionnement unitaires = 67,40 / 1000 = <strong>0,0674 DH/kg</strong>
         </div>
 
-        <!-- TABLEAU COUT D'ACHAT SELON TA METHODE EXACTE -->
         <table>
             <thead>
                 <tr><th>Éléments</th><th>Quantité (kg)</th><th>Prix unitaire (DH)</th><th>Montant total (DH)</th></tr>
@@ -388,20 +374,74 @@
 
         <h2>✅ 5. Coût de production du kilogramme (sortie Fabrication)</h2>
         <div class="calc-note">
-            Poids net produit = 550 000 × 0,90 = 495 000 kg<br>
-            • M1 : 294 000 × 4,000387 = 1 176 113,78<br>
-            • M2 : 160 000 × 1,0004 = 160 064,00<br>
-            • M3 : 96 000 × 2,5004 = 240 038,40<br>
-            • Atelier Fabrication : 202 500,00<br>
-            <strong>Coût total vrac = 1 778 716,18 DH → 3,5934 DH/kg</strong>
+            📌 <strong>Coût de production (Vrac) :</strong> Détermination du coût de la pâte NUTRIFO avant conditionnement.
         </div>
+        <table>
+            <thead>
+                <tr><th>Éléments</th><th>Quantité</th><th>Prix unitaire (DH)</th><th>Montant total (DH)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Consommation Matière M1 (CMUP)</td><td>294 000,00</td><td>4,000387</td><td>1 176 113,78</td></tr>
+                <tr><td>Consommation Matière M2 (Coût d'achat)</td><td>160 000,00</td><td>1,0004</td><td>160 064,00</td></tr>
+                <tr><td>Consommation Matière M3 (Coût d'achat)</td><td>96 000,00</td><td>2,5004</td><td>240 038,40</td></tr>
+                <tr><td>Charges indirectes : Atelier Fabrication</td><td>495,00</td><td>402,5000 *</td><td>202 500,00</td></tr>
+                <tr class="highlight-row">
+                    <td><strong>Coût de production globale (Net)</strong></td>
+                    <td><strong>495 000,00</strong></td>
+                    <td><strong>3,59336</strong></td>
+                    <td><strong>1 778 716,18</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size:0.8rem; font-style:italic; margin-top:-15px; color:#555;">* Note : Le coût d'UO exact calculé à l'étape 2 est utilisé pour imputer le total de 202 500 DH.</p>
 
-        <h2>✅ 6. Coût de production des boîtes</h2>
+        <h2>✅ 6. Coût de production des boîtes de « NUTRIFO »</h2>
         <div class="calc-note">
-            Boîtes produites = 495 000 / 0,5 = 990 000 boîtes<br>
-            Coût vrac transféré = 1 778 716,18 DH<br>
-            Conditionnement = 85 800 DH<br>
-            <strong>Coût total boîtes = 1 864 516,18 DH → 1,8833 DH/boîte</strong>
+            📌 <strong>Coût des produits finis :</strong> Transfert du produit en vrac vers l'étape de conditionnement en boîtes de 500g.
+        </div>
+        <table>
+            <thead>
+                <tr><th>Éléments</th><th>Quantité (Boîtes)</th><th>Prix unitaire (DH)</th><th>Montant total (DH)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Coût du produit en vrac transféré</td><td>990 000,00</td><td>1,79668</td><td>1 778 716,18</td></tr>
+                <tr><td>Charges indirectes : Atelier Conditionnement</td><td>990,00 (UO)</td><td>86,6667</td><td>85 800,00</td></tr>
+                <tr class="highlight-row">
+                    <td><strong>Coût de production des boîtes finies</strong></td>
+                    <td><strong>990 000,00</strong></td>
+                    <td><strong>1,88335</strong></td>
+                    <td><strong>1 864 516,18</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="explanation-box">
+            <h3>💡 شرح مفصل ومبسط بالدارجة (منين جاو هاد الأرقام؟)</h3>
+            <p>باش تفهم الجداول ديال الإنتاج (Production) مزيان، هاهو الشرح خطوة بخطوة منين جبنا كل قيمة:</p>
+            <br>
+            
+            <strong>1. جدول تكلفة إنتاج الكيلوغرام (Coût de production vrac) :</strong>
+            <ul>
+                <li><strong>الكميات المستهلكة (Quantités) :</strong> هادو جبناهم نيشان من المعطيات ديال التمرين (Consommation de la période): 294 000 kg لـ M1، و 160 000 kg لـ M2، و 96 000 kg لـ M3.</li>
+                <li><strong>الأسعار الأحادية (PU) للمواد الأولية :</strong> 
+                    <ul>
+                        <li>بالنسبة لـ <strong>M1</strong>: خدمنا بـ <strong>CMUP</strong> اللي حسبنا في جدول المخزون (الخطوة 4) اللي هو 4,000387 DH.</li>
+                        <li>بالنسبة لـ <strong>M2</strong> و <strong>M3</strong>: حيت ما عندناش مخزون بدئي (Stock initial nul)، خدمنا نيشان بتكلفة الشراء (Coût d'achat) اللي حسبنا في الخطوة 3 (1,0004 DH و 2,5004 DH).</li>
+                    </ul>
+                </li>
+                <li><strong>ورشة التصنيع (Atelier Fabrication) :</strong> خدينا عدد وحدات العمل (495 UO) وضربناها في التكلفة باش تعطينا 202 500 DH اللي هي حصة الورشة من المصاريف غير المباشرة.</li>
+                <li><strong>الوزن الصافي المحصل عليه (495 000 kg) :</strong> المجموع ديال المواد اللي دخلات للإنتاج هو: 294 000 + 160 000 + 96 000 = 550 000 kg. التمرين قال لينا كاين ضياع ديال 10% (Perte de 10%). يعني غتبقى لينا غير 90% كوزن صافي: 550 000 × 0.90 = 495 000 kg.</li>
+                <li><strong>السعر الموحد للوزن الصافي (3,5934 DH) :</strong> قinternalسمنا المجموع ديال الفلوس (1 778 716,18 DH) على الوزن الصافي (495 000 kg).</li>
+            </ul>
+            <br>
+            
+            <strong>2. جدول تكلفة إنتاج العلب (Coût de production des boîtes) :</strong>
+            <ul>
+                <li><strong>عدد العلب المنتجة (990 000 boîte) :</strong> عندنا المنتج الصافي هو 495 000 kg، وكل علبة كتهز 500 غرام (يعني 0.5 kg). إذن عدد العلب هو: 495 000 / 0.5 = 990 000 علبة.</li>
+                <li><strong>المنتج المحول (Vrac transféré) :</strong> خدينا نفس المبلغ الإجمالي اللي تقام علينا في الورشة الأولى (1 778 716,18 DH) وحولناه لهنا حيت هو الأساس اللي غيتعمر في العلب.</li>
+                <li><strong>ورشة التلفيف (Atelier Conditionnement) :</strong> زدنا المصاريف ديال هاد الورشة من جدول التوزيع (الخطوة 2) اللي هي 85 800 DH.</li>
+                <li><strong>التكلفة النهائية للعلبة الواحدة (1,8833 DH) :</strong> جمعنا المبالغ (1 778 716,18 + 85 800 = 1 864 516,18 DH) وقسمناها على عدد العلب الكلي (990 000 علبة) باش تخرج لينا التكلفة النهائية ديال كل علبة واجدة ومصاوبة.</li>
+            </ul>
         </div>
 
         <div style="background:#E9F3F5; border-radius: 24px; padding: 18px 24px; margin-top: 30px;">
@@ -416,9 +456,10 @@
                 <li>Coût de production boîtes = <strong>1 864 516,18 DH</strong> (1,8833 DH/boîte)</li>
             </ul>
         </div>
+
         <footer>
             Université Hassan 1er – FEG – Pr Youssef RACHID | Session rattrapage 2023-2024<br>
-            Correction conforme – Tableau coût d'achat selon la méthode demandée.
+            Correction conforme – Tableaux de production intégrés avec explications.
         </footer>
     </div>
 </div>
